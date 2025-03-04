@@ -3,6 +3,8 @@ import Layout from '../layouts/Layout.astro'
 import { format } from 'date-fns'
 import { getWeatherArt } from '../utils/get-weather-art'
 
+export const prerender = false
+
 const getUserLocation = async () => {
   try {
     const response = await fetch('http://ip-api.com/json/')
